@@ -43,6 +43,7 @@ sub appendLeft {
     my $value = shift;
 
     my $node = SingleLinkedList::Node->new($value);
+    $node->{next} = $self->{head}->{next};
     $self->{head}->{next} = $node;
 
     $self->{size}++;
